@@ -4,6 +4,8 @@
               auto-mode-alist))
 
 (require-package 'pip-requirements)
+(require-package 'elpy)
+(elpy-enable)
 
 
 (provide 'init-python-mode)

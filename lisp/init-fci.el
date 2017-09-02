@@ -29,11 +29,12 @@
       (turn-on-fci-mode)))
 
   ;; Regenerate fci-mode line images after switching themes
-  (defadvice enable-theme (after recompute-fci-face activate)
-    (dolist (buffer (buffer-list))
-      (with-current-buffer buffer
-        (when (sanityinc/fci-enabled-p)
-          (turn-on-fci-mode))))))
+  ;(defadvice enable-theme (after recompute-fci-face activate)
+    ;(dolist (buffer (buffer-list))
+      ;(with-current-buffer buffer
+        ;(when (sanityinc/fci-enabled-p)
+          ;(turn-on-fci-mode)))))
+          )
 
 
 (provide 'init-fci)

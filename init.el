@@ -49,9 +49,25 @@
 (require-package 'scratch)
 (require-package 'mwe-log-commands)
 
+
+(require 'package)
+(setq
+ package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                    ("org" . "http://orgmode.org/elpa/")
+                    ("melpa-stable" . "http://stable.melpa.org/packages/")
+                    ("melpa" . "http://melpa.org/packages/")))
+(package-initialize)
+(when (not package-archive-contents)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(require 'use-package)
+
+(use-package ensime)
+   ;:pin melpa-stable)
+
 (require 'init-frame-hooks)
 (require 'init-xterm)
-(require 'init-themes)
+;(require 'init-themes)
 (require 'init-osx-keys)
 (require 'init-gui-frames)
 (require 'init-dired)
@@ -89,6 +105,7 @@
 (require 'init-erlang)
 (require 'init-javascript)
 (require 'init-php)
+(require 'init-java)
 (require 'init-org)
 (require 'init-nxml)
 (require 'init-html)
