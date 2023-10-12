@@ -49,3 +49,8 @@
 (require 'init-folding)
 (require 'init-minibuffer)
 (require 'init-git)
+(require 'init-company)
+
+(require 'init-lsp)
+
+(require 'init-python)
