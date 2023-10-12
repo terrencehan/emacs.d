@@ -40,4 +40,12 @@
 (require 'init-themes)
 (require 'init-isearch)
 (require 'init-editing-utils)
-
+(require 'init-whitespace)
+(require 'init-windows)
+(require 'init-yaml)
+(require 'init-uniquify)
+(require 'init-toml)
+(require 'init-recentf)
+(require 'init-folding)
+(require 'init-minibuffer)
+(require 'init-git)
