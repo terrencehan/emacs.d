@@ -2,23 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 
-
-(use-package python
-  :defer t
-  :mode ("\\.py\\'" . python-mode)
-  :interpreter ("python3" . python-mode)
-  :config
-  ;; for debug
-  (require 'dap-python))
-
-
 (use-package lsp-pyright
-  :ensure t
-  :config
-  :hook
-  (python-mode . (lambda ()
-		  (require 'lsp-pyright)
-		  (lsp-deferred))))
+  :hook (python-mode . (lambda ()
+                         (require 'lsp-pyright)
+                         (lsp))))
 
 (provide 'init-python)
 ;;; init-python.el ends here

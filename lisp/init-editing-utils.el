@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(use-package unfill :ensure t)
+(use-package unfill)
 
 (when (fboundp 'electric-pair-mode)
   (add-hook 'after-init-hook 'electric-pair-mode))
@@ -39,7 +39,6 @@
 (add-hook 'after-init-hook 'transient-mark-mode)
 
 (use-package beacon
-  :ensure t
   :init
   (add-hook 'after-init-hook 'beacon-mode)
   :config
@@ -58,11 +57,9 @@
   (add-hook 'prog-mode-hook 'display-line-numbers-mode))
 
 (use-package rainbow-delimiters
-  :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package symbol-overlay
-  :ensure t
   :diminish symbol-overlay-mode
   :bind (
          :map symbol-overlay-mode-map
@@ -73,7 +70,6 @@
   :hook (prog-mode . symbol-overlay-mode))
 
 (use-package browse-kill-ring
-  :ensure t
   :bind (("M-Y" . browse-kill-ring)
          :map browse-kill-ring-mode-map
          ("C-g" . browse-kill-ring-quit)
@@ -96,7 +92,6 @@
 ;; Expand region
 ;;----------------------------------------------------------------------------
 (use-package expand-region
-  :ensure t
   :bind (("M-s n" . er/expand-region)))
 
 ;;----------------------------------------------------------------------------
@@ -106,19 +101,17 @@
 (put 'downcase-region 'disabled nil)
 
 (use-package avy
-  :ensure t
   :bind (("M-s s" . avy-goto-char))
   :config
   (setq avy-styles-alist '((avy-goto-char . at-full)))
   (setq avy-background t))
 
-(use-package multiple-cursors :ensure t)
+(use-package multiple-cursors)
 
 ;;----------------------------------------------------------------------------
 ;; Page break lines
 ;;----------------------------------------------------------------------------
 (use-package page-break-lines
-  :ensure t
   :diminish page-break-lines-mode
   :init
   (add-hook 'after-init-hook 'global-page-break-lines-mode))
@@ -127,19 +120,16 @@
 ;; Cut/copy the current line if no region is active
 ;;----------------------------------------------------------------------------
 (use-package whole-line-or-region
-  :ensure t
   :diminish whole-line-or-region-local-mode
   :init
   (add-hook 'after-init-hook 'whole-line-or-region-global-mode))
 
 
 (use-package highlight-escape-sequences
-  :ensure t
   :init
   (add-hook 'after-init-hook 'global-page-break-lines-mode))
 
 (use-package which-key
-  :ensure t
   :diminish which-key-mode
   :init
   (add-hook 'after-init-hook 'which-key-mode))

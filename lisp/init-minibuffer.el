@@ -2,22 +2,17 @@
 ;;; Commentary:
 ;;; Code:
 
-(use-package orderless
-  :ensure t)
+(use-package orderless)
 
 (use-package marginalia
-  :ensure t
   :init
   (add-hook 'after-init-hook 'marginalia-mode))
 
-(use-package embark
-  :ensure t)
+(use-package embark)
 
-(use-package projectile
-  :ensure t)
+(use-package projectile)
 
 (use-package consult
-  :ensure t
   :after (projectile)
   :config
   (setq-default consult-project-root-function 'projectile-project-root)
@@ -46,16 +41,13 @@
   (global-set-key [remap switch-to-buffer-other-frame] 'consult-buffer-other-frame)
   (global-set-key [remap goto-line] 'consult-goto-line))
 
-(use-package consult-flycheck
-  :ensure t)
+(use-package consult-flycheck)
 
 (use-package embark-consult
-  :ensure t
   :after (embark consult)
   :hook (embark-collect-mode . embark-consult-preview-minor-mode))
 
 (use-package vertico
-  :ensure t
   :after (orderless embark marginalia consult)
 
   :init

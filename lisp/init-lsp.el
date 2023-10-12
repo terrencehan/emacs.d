@@ -2,17 +2,14 @@
 ;;; Commentary:
 ;;; Code:
 
+(use-package all-the-icons)
 
-(use-package lsp-mode
-  :ensure t)
+(use-package lsp-mode)
 
 (use-package dap-mode
-  :ensure t
   :after (lsp-mode))
 
-(use-package lsp-ui
-  :ensure t)
-
+(use-package lsp-ui)
 
 (provide 'init-lsp)
 ;;; init-python.el ends here

@@ -3,7 +3,6 @@
 ;;; Code:
 
 (use-package origami
-  :ensure t
   :bind (:map origami-mode-map
              ("C-c f" . origami-recursively-toggle-node)
              ("C-c F" . origami-toggle-all-nodes)))

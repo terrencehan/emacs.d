@@ -2,8 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(use-package toml-mode
-  :ensure t)
+(use-package toml-mode)
 
 (provide 'init-toml)
 ;;; init-toml.el ends here

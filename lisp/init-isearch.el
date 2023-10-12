@@ -1,5 +1,4 @@
 (use-package anzu
-  :ensure t
   :config
   ;; Global settings (defaults)
   (setq anzu-mode-lighter "")

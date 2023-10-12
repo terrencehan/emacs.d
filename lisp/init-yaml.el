@@ -3,7 +3,6 @@
 ;;; Code:
 
 (use-package yaml-mode
-  :ensure t
   :config
   (add-auto-mode 'yaml-mode "\\.yml\\.erb\\'"))
 
