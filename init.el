@@ -47,6 +47,7 @@
 (require 'init-toml)
 (require 'init-recentf)
 (require 'init-folding)
+(require 'init-projectile)
 (require 'init-minibuffer)
 (require 'init-git)
 (require 'init-company)

@@ -10,8 +10,6 @@
 
 (use-package embark)
 
-(use-package projectile)
-
 (use-package consult
   :after (projectile)
   :config
