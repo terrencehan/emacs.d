@@ -56,3 +56,12 @@
 
 (require 'init-python)
 (require 'init-rust)
+
+;;----------------------------------------------------------------------------
+;; Allow access from emacsclient
+;;----------------------------------------------------------------------------
+(add-hook 'after-init-hook
+          (lambda ()
+            (require 'server)
+            (unless (server-running-p)
+              (server-start))))
