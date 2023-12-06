@@ -134,5 +134,8 @@
   :init
   (add-hook 'after-init-hook 'which-key-mode))
 
+; overwrite selected text
+(cua-selection-mode t)                  ; for rectangles, CUA is nice
+
 (provide 'init-editing-utils)
 ;;; init-editing-utils.el ends here

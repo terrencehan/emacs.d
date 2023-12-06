@@ -9,14 +9,13 @@
 (use-package magit
   :config
   (setq-default magit-diff-refine-hunk t)
+  (fullframe magit-status magit-mode-quit-window)
   :bind (("C-x g" . magit-status)))
 
 (use-package fullframe)
 
 (use-package magit-todos
   :after(magit)
-  :config
-  (fullframe magit-status magit-mode-quit-window)
   )
 
 (provide 'init-git)
