@@ -65,3 +65,5 @@
             (require 'server)
             (unless (server-running-p)
               (server-start))))
+
+(setq compilation-scroll-output t)
