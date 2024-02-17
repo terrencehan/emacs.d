@@ -4,7 +4,10 @@
 
 (use-package all-the-icons)
 
-(use-package lsp-mode)
+(use-package lsp-mode
+  :init
+  (setq lsp-headerline-arrow "")
+)
 
 (use-package dap-mode
   :after (lsp-mode))
