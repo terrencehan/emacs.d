@@ -104,7 +104,9 @@
   :bind (("M-s s" . avy-goto-char))
   :config
   (setq avy-styles-alist '((avy-goto-char . at-full)))
-  (setq avy-background t))
+  (setq avy-background t)
+  (set-face-attribute 'avy-lead-face nil :background "white" :foreground "black")
+  )
 
 (use-package multiple-cursors)
 
