@@ -56,6 +56,7 @@
 
 (require 'init-python)
 (require 'init-rust)
+(require 'init-org-roam)
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient

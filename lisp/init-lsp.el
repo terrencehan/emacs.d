@@ -6,7 +6,7 @@
 
 (use-package lsp-mode
   :init
-  (setq lsp-headerline-arrow "")
+  (setq lsp-headerline-arrow "/")
 )
 
 (use-package dap-mode
