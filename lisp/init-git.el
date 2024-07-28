@@ -2,8 +2,6 @@
 ;;; Commentary:
 
 (use-package git-blamed)
-(use-package gitignore-mode)
-(use-package gitconfig-mode)
 (use-package git-timemachine)
 
 (use-package magit
