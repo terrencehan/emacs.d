@@ -2,11 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 (use-package rust-mode
-  :hook (rust-mode . lsp)
-  :config
-  (setq lsp-rust-analyzer-proc-macro-enable t)
-  (setq lsp-rust-analyzer-cargo-all-features t)
-  (setq lsp-rust-analyzer-diagnostics-disabled ["unresolved-proc-macro"]))
+  :hook (rust-mode . eglot-ensure))
 
 (provide 'init-rust)
 ;;; init-rust.el ends here

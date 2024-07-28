@@ -52,9 +52,7 @@
 (require 'init-git)
 (require 'init-company)
 
-(require 'init-lsp)
-
-(require 'init-python)
+;(require 'init-python)
 (require 'init-rust)
 (require 'init-org-roam)
 
