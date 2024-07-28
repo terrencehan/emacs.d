@@ -118,6 +118,7 @@ locate PACKAGE."
 
 (maybe-require-package 'use-package)
 
+(require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
 (provide 'init-elpa)
