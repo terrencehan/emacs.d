@@ -3,7 +3,6 @@
 ;;; Code:
 
 (use-package gptel
-  :ensure t
   :config
   (setq gptel-log-level 'debug)
   (setq gptel-model "qwen3-nothinking")

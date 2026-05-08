@@ -120,7 +120,7 @@ locate PACKAGE."
 (maybe-require-package 'use-package)
 
 (require 'use-package-ensure)
-(setq use-package-always-ensure t)
+(setq use-package-always-ensure nil)
 
 (provide 'init-elpa)
 ;;; init-elpa.el ends here
