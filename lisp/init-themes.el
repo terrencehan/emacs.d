@@ -1,9 +1,13 @@
-(use-package doom-themes
+(use-package catppuccin-theme
+  :init
+  (setq catppuccin-flavor 'mocha)
+  ;(setq catppuccin-flavor 'frappe)
   :config
-  ;; Global settings (defaults)
-  (setq doom-themes-enable-bold nil    ; if nil, bold is universally disabled
-	doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  (load-theme 'doom-monokai-octagon t)
-  (doom-themes-treemacs-config))
+  (load-theme 'catppuccin t)
+  ;; 如果在终端运行，强制去除背景色
+  (unless (display-graphic-p)
+    (set-face-background 'default "none")
+    (set-face-background 'line-number "none")
+    (set-face-background 'fringe "none")))
 
 (provide 'init-themes)
