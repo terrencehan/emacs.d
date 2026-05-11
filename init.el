@@ -37,6 +37,7 @@
 ;;----------------------------------------------------------------------------
 (require 'init-preload-local nil t)
 
+(require 'init-envrc)
 (require 'init-themes)
 (require 'init-isearch)
 (require 'init-editing-utils)
