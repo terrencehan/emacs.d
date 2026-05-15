@@ -4,7 +4,6 @@
 
 (use-package eglot
   :config
-  (setq eglot-ignored-server-capabilities '(:codeActionProvider))
   (add-to-list 'eglot-server-programs
                `(rust-mode . ("rust-analyzer" :initializationOptions
                               (:procMacro (:enable t)
