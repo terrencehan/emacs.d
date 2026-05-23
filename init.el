@@ -51,6 +51,7 @@
 (require 'init-projectile)
 (require 'init-minibuffer)
 (require 'init-git)
+(require 'init-gptel)
 (require 'init-company)
 
 ;(require 'init-python)

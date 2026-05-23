@@ -5,7 +5,7 @@
 (use-package gptel
   :config
   (setq gptel-log-level 'debug)
-  (setq gptel-model "qwen3-nothinking")
+  (setq gptel-model "kimi-26")
   (setq gptel-prompt-prefix-alist '((markdown-mode . "### ")
                                     (org-mode . "*** ")
                                     (text-mode . ">>> ")))
@@ -23,7 +23,7 @@
                     ("Content-Type" . "application/json"))
           :stream t
           :key 'gptel-api-key
-          :models '("deepseek-r1"))))
+          :models '("kimi-26"))))
 
 (provide 'init-gptel)
 ;;; init-rust.el ends here
