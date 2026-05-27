@@ -12,7 +12,11 @@
                                                                 "all")))))
   )
 
+(use-package eat)
+
 (use-package ai-code
+  :init
+  (setq ai-code-onboarding-auto-show nil)
   ;; :straight (:host github :repo "tninja/ai-code-interface.el") ;; if you want to use straight to install, no need to have MELPA setting above
   :config
   ;; use codex as backend, other options are 'claude-code, 'gemini, 'github-copilot-cli, 'opencode, 'kilo, 'grok, 'cursor, 'kiro, 'codebuddy, 'aider, 'eca, 'agent-shell, 'claude-code-ide, 'claude-code-el
@@ -22,7 +26,7 @@
   ;; Enable global keybinding for the main menu
   (global-set-key (kbd "C-c a") #'ai-code-menu)
   ;; Optional: Use eat if you prefer, by default it is vterm
-  ;; (setq ai-code-backends-infra-terminal-backend 'eat) ;; config for native CLI backends. for external backends such as agent-shell, claude-code-ide.el and claude-code.el, please check their own config
+  (setq ai-code-backends-infra-terminal-backend 'eat) ;; config for native CLI backends. for external backends such as agent-shell, claude-code-ide.el and claude-code.el, please check their own config
   ;; Optional: Try ghostel as an backend infra
   ;; (setq ai-code-backends-infra-terminal-backend 'ghostel)
   ;; Optional: Disable @ file completion in comments and AI sessions
