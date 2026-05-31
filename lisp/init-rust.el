@@ -12,6 +12,18 @@
                                                                 "all")))))
   )
 
+(use-package breadcrumb
+  :hook (eglot-managed-mode . breadcrumb-local-mode)
+  :config
+  ;; 🌟【核心修复】设置正确的 Imenu（函数/Trait）最大长度限制
+  ;; 默认是 0.3（占窗口宽度的 30%），这里改成 150（允许显示 150 个字符）
+  (setq breadcrumb-imenu-max-length 150)
+
+  ;; 设置项目/文件路径的最大长度（0 表示完全不裁剪，或者设为 20 强行压缩文件路径）
+  (setq breadcrumb-project-max-length 20)
+  ;; 让 breadcrumb 优先使用 eglot/lsp 的后端数据
+  (setq breadcrumb-imenu-generic-expression nil))
+
 (use-package eat)
 
 (use-package ai-code
